@@ -20,6 +20,7 @@ font = pygame.font.Font(resourcesS + 'HeinWriting.ttf', 32)
 showSplash = True
 while showSplash:
     keys = pygame.key.get_pressed()
+    screen.blit(splashscreen, (0, 0))
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()

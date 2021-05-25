@@ -153,13 +153,10 @@ while loop:
             player.moveLeft()
         if keys[pygame.K_d]:
             player.moveRight()
-        if keys[pygame.K_s]:
-            player.moveDown()
         if keys[pygame.K_w]:
             if bottom:
                 player.jump()
-                if player.addpoint:
-                    SCORE += 1
+                SCORE += 1
                 if SCORE % 5 == 0 and spawnAstroid:
                     for x in range(int(SCORE / 5)):
                         enemy_sprites.add(AstroidSprite((
@@ -171,7 +168,7 @@ while loop:
                     enemy_sprites.add(TearSprite((
                         randint(holeim.get_width() // 2, SCREENW), -holeim.get_height() - 75)))
                     spawnTear = False
-                elif SCORE % 11 == 0:
+                elif SCORE % 11 >= 0:
                     spawnTear = True
                 if SCORE % 7 == 0 and spawnEraser:
                     enemy_sprites.add(EraserSprite((
@@ -194,13 +191,9 @@ while loop:
 
         for enemy in enemy_sprites:
             if pygame.sprite.collide_mask(enemy, player):
-                if enemy.isTearSprite:
-                    player.life = 0
-                    hitsound.play()
-                else:
-                    hitsound.play()
-                    enemy_sprites.remove(enemy)
-                    player.life -= 1
+                hitsound.play()
+                enemy_sprites.remove(enemy)
+                player.life -= 1
             for bullets in bullet_group:
                 if pygame.sprite.collide_mask(bullets, enemy):
                     killsound.play()
@@ -225,7 +218,7 @@ while loop:
         enemy_bullet_group.update()
         enemy_bullet_group.draw(screen)
 
-        if SCORE >= 50 and not boss1.dead():
+        if SCORE >= 25 and not boss1.dead():
             boss1.spawnBoss()
             boss_group.update()
             boss_group.draw(screen)

@@ -26,6 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="paperhole.png update">
+      <change afterPath="$PROJECT_DIR$/resources/heart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621969808526</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="paperhole.png update">
+      <created>1621970176554</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621970176554</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

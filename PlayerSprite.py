@@ -21,7 +21,7 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.movingLeft = True
         self.x = loc[0]
         self.y = loc[1]
-        self.jumpheight = 160
+        self.jumpheight = 250
         self.jumpnow = 0
         self.fell = False
         self.collide = False
@@ -42,16 +42,22 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.rect.centerx -= 1
         self.image = leftim
 
+    def moveDown(self):
+        if self.rect.centery == 0:
+            self.rect.centery = SCREENH
+        self.rect.centery += 1
+        self.image = jumpim
+
     def update(self):
         if self.jumped == False and not self.bottom:
             self.rect.centery += 1
         if self.jumped == True:
             self.rect.centery -= 1
-            self.jumpnow += 1
-        if self.jumpheight == self.jumpnow:
+            self.jumpnow += 1.25
+        if self.jumpheight <= self.jumpnow:
             self.jumped = False
             self.jumpnow = 0
-        if self.rect.centery == SCREENH:
+        if self.rect.centery >= SCREENH:
             self.life = 0
         if self.jumpnow == 1:
             self.addpoint = False

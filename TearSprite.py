@@ -18,6 +18,8 @@ class TearSprite(pygame.sprite.Sprite):
 
         self.damage = 1
 
+        self.isTearSprite = True
+
     def update(self, val):
         if val:
             self.rect.centery += 1

@@ -3,7 +3,7 @@ from GlobalVariables import *
 
 resourcesS = 'resources//'
 playerim = pygame.image.load(resourcesS + "playerimg.png")
-enemyim = pygame.image.load(resourcesS + "asteroidimg.png")
+enemyim = pygame.image.load(resourcesS + "scissors.png")
 platformim = pygame.image.load(resourcesS + "platformimg.png")
 jumpim = pygame.image.load(resourcesS + "jumpimg.png")
 leftim = pygame.image.load(resourcesS + "leftimg.png")

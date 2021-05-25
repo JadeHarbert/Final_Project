@@ -20,6 +20,7 @@ font = pygame.font.Font(resourcesS + 'HeinWriting.ttf', 32)
 showSplash = True
 while showSplash:
     keys = pygame.key.get_pressed()
+    screen.blit(splashscreen, (0, 0))
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
@@ -161,22 +162,26 @@ while loop:
                     SCORE += 1
                 if SCORE % 5 == 0 and spawnAstroid:
                     for x in range(int(SCORE / 5)):
-                        enemy_sprites.add(AstroidSprite((randint(0, SCREENW), -enemyim.get_height() - 75), enemyim))
+                        enemy_sprites.add(AstroidSprite((
+                            randint(enemyim.get_width() // 2, SCREENW), -enemyim.get_height() - 75), enemyim))
                     spawnAstroid = False
                 elif SCORE % 6 == 0:
                     spawnAstroid = True
                 if SCORE % 10 == 0 and spawnTear:
-                    enemy_sprites.add(TearSprite((randint(0, SCREENW), -holeim.get_height() - 75)))
+                    enemy_sprites.add(TearSprite((
+                        randint(holeim.get_width() // 2, SCREENW), -holeim.get_height() - 75)))
                     spawnTear = False
                 elif SCORE % 11 == 0:
                     spawnTear = True
                 if SCORE % 7 == 0 and spawnEraser:
-                    enemy_sprites.add(EraserSprite((randint(0, SCREENW), -eraserim.get_height() - 75)))
+                    enemy_sprites.add(EraserSprite((
+                        randint(eraserim.get_width() // 2, SCREENW), -eraserim.get_height() - 75)))
                     spawnEraser = False
                 elif SCORE % 8 == 0:
                     spawnEraser = True
                 if SCORE % 15 == 0 and spawnLife:
-                    life_sprites.add(LifeSprite((randint(0, SCREENW), -lifeim.get_height() - 75)))
+                    life_sprites.add(LifeSprite((
+                        randint(lifeim.get_width() // 2, SCREENW), -lifeim.get_height() - 75)))
                     spawnLife = False
                 elif SCORE % 16 == 0:
                     spawnLife = True
@@ -189,9 +194,13 @@ while loop:
 
         for enemy in enemy_sprites:
             if pygame.sprite.collide_mask(enemy, player):
-                hitsound.play()
-                enemy_sprites.remove(enemy)
-                player.life -= 1
+                if enemy.isTearSprite:
+                    player.life = 0
+                    hitsound.play()
+                else:
+                    hitsound.play()
+                    enemy_sprites.remove(enemy)
+                    player.life -= 1
             for bullets in bullet_group:
                 if pygame.sprite.collide_mask(bullets, enemy):
                     killsound.play()

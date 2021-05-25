@@ -15,7 +15,7 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.image = playerim
         self.rect = self.image.get_rect()
         self.rect.center = loc
-        self.rect.centery -= self.PH / 2
+        self.rect.centery -= self.PH/2
         self.rect.centerx -= self.PW / 2
         self.mask = pygame.mask.from_surface(self.image)
         self.movingLeft = True
@@ -42,18 +42,24 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.rect.centerx -= 1
         self.image = leftim
 
+    def moveDown(self):
+        if self.rect.centery == 0:
+            self.rect.centery = SCREENH
+        self.rect.centery += 1
+        self.image = jumpim
+
     def update(self):
         if self.jumped == False and not self.bottom:
-            self.rect.centery += 2
+            self.rect.centery += 1
         if self.jumped == True:
             self.rect.centery -= 1
             self.jumpnow += 1.25
         if self.jumpheight <= self.jumpnow:
             self.jumped = False
             self.jumpnow = 0
-        if self.rect.centery == SCREENH:
+        if self.rect.centery >= SCREENH:
             self.life = 0
-        if self.jumpnow == 1.25:
+        if self.jumpnow == 1:
             self.addpoint = False
 
     def colliding(self, val, bot):

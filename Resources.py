@@ -30,8 +30,7 @@ enemysound = pygame.mixer.Sound(resourcesS + "enemysound.wav")
 winsound = pygame.mixer.Sound(resourcesS + "winsound.wav")
 diesound = pygame.mixer.Sound(resourcesS + "gameover.wav")
 lifesound = pygame.mixer.Sound(resourcesS + "lifesound.wav")
-msg = "Lecture Survivor! Press Space to Play!"
-#u
+msg = "Lecture Survivor! Press Any Key to Play!"
 my_font = pygame.font.Font(resourcesS + 'HeinWriting.ttf', 25)
 splash = my_font.render(msg, True, (255, 0, 0), (0, 0, 0))
 splashrect = splash.get_rect()

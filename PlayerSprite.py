@@ -15,13 +15,13 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.image = playerim
         self.rect = self.image.get_rect()
         self.rect.center = loc
-        self.rect.centery -= self.PH/2
+        self.rect.centery -= self.PH / 2
         self.rect.centerx -= self.PW / 2
         self.mask = pygame.mask.from_surface(self.image)
         self.movingLeft = True
         self.x = loc[0]
         self.y = loc[1]
-        self.jumpheight = 160
+        self.jumpheight = 250
         self.jumpnow = 0
         self.fell = False
         self.collide = False
@@ -75,7 +75,7 @@ class BulletSprite(pygame.sprite.Sprite):
     PH = None
     jumped = False
 
-    def __init__(self, loc):
+    def __init__(self, loc, leftDiag, rightDiag):
         super().__init__()
         self.PW = bulletim.get_width()
         self.PH = bulletim.get_height()
@@ -86,6 +86,15 @@ class BulletSprite(pygame.sprite.Sprite):
         self.rect.centerx -= self.PW / 2
         self.mask = pygame.mask.from_surface(self.image)
         self.m = 0
+        self.leftDiag = leftDiag
+        self.rightDiag = rightDiag
 
     def update(self):
-        self.rect.centery -= 2
+        if not self.leftDiag and not self.rightDiag:
+            self.rect.centery -= 2
+        elif self.leftDiag:
+            self.rect.centery -= 2
+            self.rect.centerx -= 1
+        else:
+            self.rect.centery -= 2
+            self.rect.centerx += 1

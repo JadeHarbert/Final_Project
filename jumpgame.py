@@ -122,7 +122,15 @@ while loop:
                     else:
                         screen = pygame.display.set_mode((640, 500), 0, 32)
                 if event.key == pygame.K_SPACE:
-                    bullet = BulletSprite(player.rect.center)
+                    bullet = BulletSprite(player.rect.center, False, False)
+                    bullet_group.add(bullet)
+                    shootsound.play()
+                if event.key == pygame.K_q:
+                    bullet = BulletSprite(player.rect.center, True, False)
+                    bullet_group.add(bullet)
+                    shootsound.play()
+                if event.key == pygame.K_e:
+                    bullet = BulletSprite(player.rect.center, False, True)
                     bullet_group.add(bullet)
                     shootsound.play()
 
@@ -140,11 +148,11 @@ while loop:
         player.colliding(testcollision, bottom)
 
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT]:
+        if keys[pygame.K_a]:
             player.moveLeft()
-        if keys[pygame.K_RIGHT]:
+        if keys[pygame.K_d]:
             player.moveRight()
-        if keys[pygame.K_UP]:
+        if keys[pygame.K_w]:
             if bottom:
                 player.jump()
                 if player.addpoint:

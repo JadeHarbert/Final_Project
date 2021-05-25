@@ -152,6 +152,8 @@ while loop:
             player.moveLeft()
         if keys[pygame.K_d]:
             player.moveRight()
+        if keys[pygame.K_s]:
+            player.moveDown()
         if keys[pygame.K_w]:
             if bottom:
                 player.jump()

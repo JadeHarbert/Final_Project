@@ -25,12 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="idk what i did hahaha">
-      <change beforePath="$PROJECT_DIR$/.idea/gametwo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gametwo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumpgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumpgame.py" afterDir="false" />
-    </list>
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="changed somethings" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621970782177</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="changed somethings">
+      <created>1621985338074</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621985338074</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +268,7 @@
     <MESSAGE value="added jump mechanics" />
     <MESSAGE value="paperhole.png update" />
     <MESSAGE value="life update to heart.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="life update to heart.png" />
+    <MESSAGE value="changed somethings" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed somethings" />
   </component>
 </project>

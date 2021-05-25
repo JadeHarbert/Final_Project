@@ -152,8 +152,6 @@ while loop:
             player.moveLeft()
         if keys[pygame.K_d]:
             player.moveRight()
-        if keys[pygame.K_s]:
-            player.moveDown()
         if keys[pygame.K_w]:
             if bottom:
                 player.jump()
@@ -216,10 +214,11 @@ while loop:
         enemy_bullet_group.update()
         enemy_bullet_group.draw(screen)
 
-        if SCORE >= 50 and not boss1.dead():
+        if SCORE >= 25 and not boss1.dead():
             boss1.spawnBoss()
             boss_group.update()
             boss_group.draw(screen)
+
 
         for enemybullets in boss1.getBullets():
             if pygame.sprite.collide_mask(enemybullets, player):

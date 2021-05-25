@@ -42,12 +42,6 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.rect.centerx -= 1
         self.image = leftim
 
-    def moveDown(self):
-        if self.rect.centery == 0:
-            self.rect.centery = SCREENH
-        self.rect.centery += 1
-        self.image = playerim
-
     def update(self):
         if self.jumped == False and not self.bottom:
             self.rect.centery += 1

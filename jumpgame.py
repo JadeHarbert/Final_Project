@@ -191,9 +191,14 @@ while loop:
 
         for enemy in enemy_sprites:
             if pygame.sprite.collide_mask(enemy, player):
-                hitsound.play()
-                enemy_sprites.remove(enemy)
-                player.life -= 1
+                if enemy.isTearSprite:
+                    hitsound.play()
+                    enemy_sprites.remove(enemy)
+                    player.life = 0
+                else:
+                    hitsound.play()
+                    enemy_sprites.remove(enemy)
+                    player.life -= 1
             for bullets in bullet_group:
                 if pygame.sprite.collide_mask(bullets, enemy):
                     killsound.play()

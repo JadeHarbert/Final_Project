@@ -44,16 +44,16 @@ class PlayerSprite(pygame.sprite.Sprite):
 
     def update(self):
         if self.jumped == False and not self.bottom:
-            self.rect.centery += 1
+            self.rect.centery += 2
         if self.jumped == True:
             self.rect.centery -= 1
-            self.jumpnow += 1
-        if self.jumpheight == self.jumpnow:
+            self.jumpnow += 1.25
+        if self.jumpheight <= self.jumpnow:
             self.jumped = False
             self.jumpnow = 0
         if self.rect.centery == SCREENH:
             self.life = 0
-        if self.jumpnow == 1:
+        if self.jumpnow == 1.25:
             self.addpoint = False
 
     def colliding(self, val, bot):

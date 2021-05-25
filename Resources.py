@@ -13,9 +13,10 @@ holeim = pygame.image.load(resourcesS + "paperhole.png")
 bossim = pygame.image.load(resourcesS + "ufoboss.png")
 madbossim = pygame.image.load(resourcesS + "madboss.png")
 eraserim = pygame.image.load(resourcesS + "eraserimg.png")
-lifeim = pygame.image.load(resourcesS + "lifeimg.png")
+lifeim = pygame.image.load(resourcesS + "heart.png")
 background_image_filename = resourcesS + 'backgroundimg.png'
 background2_image_filename = resourcesS + 'background2img.png'
+splashscreen_image_filename = resourcesS + 'splashscreen.png'
 sprite_image_filename = resourcesS + 'playerimg.png'
 pygame.init()
 pygame.mixer.init()
@@ -37,4 +38,5 @@ splashrect = splash.get_rect()
 splashrect.center = (SCREENW / 2, SCREENH / 2)
 background = pygame.image.load(background_image_filename).convert()
 background2 = pygame.image.load(background2_image_filename).convert()
+splashscreen = pygame.image.load(splashscreen_image_filename).convert()
 spriteim = pygame.image.load(sprite_image_filename).convert_alpha()

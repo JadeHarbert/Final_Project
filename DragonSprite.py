@@ -7,14 +7,14 @@ class DragonSprite(pygame.sprite.Sprite):
 
     def __init__(self):
         super().__init__()
-        self.PW = bossim.get_width()
-        self.PH = bossim.get_height()
-        self.image = bossim
+        self.PW = dragonim.get_width()
+        self.PH = dragonim.get_height()
+        self.image = dragonim
         self.rect = self.image.get_rect()
         self.rect.centerx = SCREENW / 2
         self.rect.centery = self.PH / 2
         self.mask = pygame.mask.from_surface(self.image)
-        self.health = 10
+        self.health = 40
         self.spawn = False
         self.bulletList = []
         self.timer = 0
@@ -41,18 +41,18 @@ class DragonSprite(pygame.sprite.Sprite):
             self.timer = 0
         self.timer += 1
 
-    def spawnBoss(self):
+    def spawnBoss2(self):
         self.spawn = True
 
     def getBullets(self):
-        enemy_bullet_group = pygame.sprite.Group()
-        for enemybullets in self.bulletList:
-            enemy_bullet_group.add(enemybullets)
-        return enemy_bullet_group
+        fire_bullet_group = pygame.sprite.Group()
+        for firebullets in self.bulletList:
+            fire_bullet_group.add(firebullets)
+        return fire_bullet_group
 
     def removeBullet(self, bullet):
-        for enemybullets in self.bulletList:
-            if enemybullets == bullet:
+        for firebullets in self.bulletList:
+            if firebullets == bullet:
                 self.bulletList.remove(bullet)
                 break
 
@@ -70,9 +70,9 @@ class BossBullet(pygame.sprite.Sprite):
 
     def __init__(self, loc):
         super().__init__()
-        self.PW = bossim.get_width()
-        self.PH = bossim.get_height()
-        self.image = bulletim
+        self.PW = dragonim.get_width()
+        self.PH = dragonim.get_height()
+        self.image = fireim
         self.rect = self.image.get_rect()
         self.rect.center = loc
         self.mask = pygame.mask.from_surface(self.image)

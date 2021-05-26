@@ -77,7 +77,9 @@ while loop:
     boss1 = BossSprite()
     boss2 = DragonSprite()
     boss_group = pygame.sprite.Group()
-    boss_group.add(boss1, boss2)
+    boss_group.add(boss1)
+    dragon_group = pygame.sprite.Group()
+    dragon_group.add(boss2)
 
     spawnTear = True
 
@@ -96,7 +98,7 @@ while loop:
             gameloop = False
             gameover = True
             lose = True
-        if boss1.dead():
+        if boss2.dead():
             gameloop = False
             gameover = True
             win = True
@@ -233,14 +235,14 @@ while loop:
         fire_bullet_group.update()
         fire_bullet_group.draw(screen)
 
-        if SCORE >= 25 and not boss1.dead():
+        if SCORE >= 5 and not boss1.dead():
             boss1.spawnBoss()
             boss_group.update()
             boss_group.draw(screen)
-        if SCORE >= 50 and boss1.dead():
-            boss2.spawnBoss()
-            boss_group.update()
-            boss_group.draw(screen)
+        if SCORE >= 10 and not boss2.dead():
+            boss2.spawnBoss2()
+            dragon_group.update()
+            dragon_group.draw(screen)
 
         for enemybullets in boss1.getBullets():
             if pygame.sprite.collide_mask(enemybullets, player):

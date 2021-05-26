@@ -14,6 +14,8 @@ class AstroidSprite(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
         self.isTearSprite = False
 
+        self.isTearSprite = False
+
     def update(self, val):
         self.rect.centery += 2
 

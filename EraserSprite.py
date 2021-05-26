@@ -18,6 +18,8 @@ class EraserSprite(pygame.sprite.Sprite):
         self.isTearSprite = False
         self.damage = 1
 
+        self.isTearSprite = False
+
     def update(self, val):
         if val:
             self.rect.centery += 1

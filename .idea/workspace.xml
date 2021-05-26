@@ -25,9 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="paperhole.png update">
-      <change beforePath="$PROJECT_DIR$/.idea/gametwo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gametwo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="idk what i did hahaha">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroidSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/AstroidSprite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BossSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/BossSprite.py" afterDir="false" />
@@ -159,6 +157,7 @@
       <workItem from="1621478198138" duration="5988000" />
       <workItem from="1621964903811" duration="2052000" />
       <workItem from="1621968296409" duration="711000" />
+      <workItem from="1621985252269" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="added class files">
       <created>1621479288989</created>

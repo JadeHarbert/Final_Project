@@ -21,6 +21,7 @@ class BossSprite(pygame.sprite.Sprite):
         self.timer = 0
         self.timermax = 100
         self.direction = "right"
+        self.isTearSprite = False
 
     def update(self):
         if self.direction == "right":

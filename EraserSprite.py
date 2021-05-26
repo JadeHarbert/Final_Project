@@ -15,7 +15,7 @@ class EraserSprite(pygame.sprite.Sprite):
         self.rect.centery -= self.PH/2
         self.rect.centerx -= self.PW / 2
         self.mask = pygame.mask.from_surface(self.image)
-
+        self.isTearSprite = False
         self.damage = 1
 
     def update(self, val):

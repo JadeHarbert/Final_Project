@@ -14,7 +14,7 @@ class BossSprite(pygame.sprite.Sprite):
         self.rect.centerx = SCREENW / 2
         self.rect.centery = self.PH / 2
         self.mask = pygame.mask.from_surface(self.image)
-        self.health = 10
+        self.health = 20
         self.spawn = False
         self.bulletList = []
         self.timer = 0
@@ -76,7 +76,7 @@ class BossBullet(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = loc
         self.mask = pygame.mask.from_surface(self.image)
-        self.health = 10
+        self.health = 20
         self.spawn = False
         self.delete = False
 

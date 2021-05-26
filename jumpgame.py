@@ -71,10 +71,12 @@ while loop:
 
     bullet_group = pygame.sprite.Group()
     enemy_bullet_group = pygame.sprite.Group()
+    fire_bullet_group = pygame.sprite.Group()
 
     boss1 = BossSprite()
+    boss2 = DragonSprite()
     boss_group = pygame.sprite.Group()
-    boss_group.add(boss1)
+    boss_group.add(boss1, boss2)
 
     spawnTear = True
 
@@ -82,7 +84,7 @@ while loop:
 
     spawnLife = True
 
-    global SCORE
+    # global SCORE
     SCORE = 1
 
     lose = False
@@ -132,7 +134,7 @@ while loop:
         bottom = False
         for plat in platform_group:
             if plat.rect.centery == SCREENH:
-                platform_group.add(PlatformSprite((randint(25, SCREENH-25), randint(layer, layer + 65)), platformim))
+                platform_group.add(PlatformSprite((randint(25, SCREENH - 25), randint(layer, layer + 65)), platformim))
                 platform_group.remove(plat)
             if pygame.sprite.collide_mask(plat, player):
                 testcollision = True
@@ -198,9 +200,12 @@ while loop:
                     player.life -= 1
             for bullets in bullet_group:
                 if pygame.sprite.collide_mask(bullets, enemy):
-                    killsound.play()
-                    SCORE += 1
-                    enemy_sprites.remove(enemy)
+                    if not enemy.isTearSprite:
+                        killsound.play()
+                        SCORE += 1
+                        enemy_sprites.remove(enemy)
+                    else:
+                        bullet_group.remove(bullets)
                 if bullets.rect.centery < 0:
                     bullet_group.remove(bullets)
                 if bullets.rect.centery > SCREENH:
@@ -217,12 +222,22 @@ while loop:
                 enemysound.play()
                 boss1.hit(player.damage)
                 bullet_group.remove(bullets)
+            if pygame.sprite.collide_mask(bullets, boss2) and boss2.spawn:
+                enemysound.play()
+                boss2.hit(player.damage)
+                bullet_group.remove(bullets)
 
         enemy_bullet_group.update()
         enemy_bullet_group.draw(screen)
+        fire_bullet_group.update()
+        fire_bullet_group.draw(screen)
 
         if SCORE >= 25 and not boss1.dead():
             boss1.spawnBoss()
+            boss_group.update()
+            boss_group.draw(screen)
+        if SCORE >= 50 and boss1.dead():
+            boss2.spawnBoss()
             boss_group.update()
             boss_group.draw(screen)
 
@@ -235,7 +250,16 @@ while loop:
                 boss1.removeBullet(enemybullets)
                 break
 
+        for firebullets in boss2.getBullets():
+            if pygame.sprite.collide_mask(firebullets, player):
+                player.life -= 2
+                boss2.removeBullet(firebullets)
+            if firebullets.rect.centery >= SCREENH:
+                boss2.removeBullet(firebullets)
+                break
+
         enemy_bullet_group = boss1.getBullets()
+        fire_bullet_group = boss2.getBullets()
         player.update()
         player_group.draw(screen)
         platform_group.update(player.jumped)

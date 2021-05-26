@@ -29,6 +29,7 @@
       <change afterPath="$PROJECT_DIR$/resources/dragon copy.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/spider.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumpgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumpgame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,14 +283,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622054670794</updated>
     </task>
-    <task id="LOCAL-00019" summary="new/smaller dragon">
-      <created>1622057683072</created>
+    <task id="LOCAL-00019" summary="Coding for 3rd boss (Spider)">
+      <created>1622057846312</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1622057683072</updated>
+      <updated>1622057846312</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fixed spider boss">
+      <created>1622058082181</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1622058082181</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +345,8 @@
     <MESSAGE value="absolutely nothing" />
     <MESSAGE value="Update to Master" />
     <MESSAGE value="Can't kill black holes" />
-    <MESSAGE value="new/smaller dragon" />
-    <option name="LAST_COMMIT_MESSAGE" value="new/smaller dragon" />
+    <MESSAGE value="Coding for 3rd boss (Spider)" />
+    <MESSAGE value="fixed spider boss" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed spider boss" />
   </component>
 </project>

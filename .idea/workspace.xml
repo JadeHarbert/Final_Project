@@ -25,15 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="paperhole.png update">
-      <change beforePath="$PROJECT_DIR$/.idea/gametwo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gametwo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="Landing on platform adds points">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroidSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/AstroidSprite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BossSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/BossSprite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EraserSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/EraserSprite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerSprite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumpgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumpgame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621970782177</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Landing on platform adds points">
+      <created>1621988265390</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621988265390</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,10 +270,11 @@
     <MESSAGE value="added jump mechanics" />
     <MESSAGE value="paperhole.png update" />
     <MESSAGE value="life update to heart.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="life update to heart.png" />
+    <MESSAGE value="Landing on platform adds points" />
+    <option name="LAST_COMMIT_MESSAGE" value="Landing on platform adds points" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Final_Project$jumpgame.coverage" NAME="jumpgame Coverage Results" MODIFIED="1621988208382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Final_Project$jumpgame.coverage" NAME="jumpgame Coverage Results" MODIFIED="1622048514604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Final_Project$PlayerSprite.coverage" NAME="PlayerSprite Coverage Results" MODIFIED="1621968706299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gametwo22$jumpgame.coverage" NAME="jumpgame Coverage Results" MODIFIED="1621872803587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

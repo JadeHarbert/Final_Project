@@ -15,7 +15,8 @@ madbossim = pygame.image.load(resourcesS + "madboss.png")
 eraserim = pygame.image.load(resourcesS + "eraserimg.png")
 lifeim = pygame.image.load(resourcesS + "heart.png")
 background_image_filename = resourcesS + 'backgroundimg.png'
-background2_image_filename = resourcesS + 'background2img.png'
+#background2_image_filename = resourcesS + 'background2img.png'
+background2_image_filename = resourcesS + 'GameOver.png'
 splashscreen_image_filename = resourcesS + 'splashscreen.png'
 sprite_image_filename = resourcesS + 'playerimg.png'
 pygame.init()

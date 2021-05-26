@@ -234,11 +234,17 @@ while loop:
                 enemysound.play()
                 boss2.hit(player.damage)
                 bullet_group.remove(bullets)
+            if pygame.sprite.collide_mask(bullets, boss3) and boss3.spawn:
+                enemysound.play()
+                boss3.hit(player.damage)
+                bullet_group.remove(bullets)
 
         enemy_bullet_group.update()
         enemy_bullet_group.draw(screen)
         fire_bullet_group.update()
         fire_bullet_group.draw(screen)
+        web_bullet_group.update()
+        web_bullet_group.draw(screen)
 
         if SCORE >= 5 and not boss1.dead():
             boss1.spawnBoss()

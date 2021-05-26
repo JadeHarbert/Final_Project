@@ -25,7 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="fixed game over screen and created spot for emily to add win image">
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="ok i fixed some spacing sorry jade lol">
       <change beforePath="$PROJECT_DIR$/jumpgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumpgame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622050091937</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ok i fixed some spacing sorry jade lol">
+      <created>1622050188442</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1622050188442</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +295,7 @@
     <MESSAGE value="deleted some old resources for real this time" />
     <MESSAGE value="fixed bugs" />
     <MESSAGE value="fixed game over screen and created spot for emily to add win image" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed game over screen and created spot for emily to add win image" />
+    <MESSAGE value="ok i fixed some spacing sorry jade lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok i fixed some spacing sorry jade lol" />
   </component>
 </project>

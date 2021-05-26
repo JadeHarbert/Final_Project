@@ -26,8 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="fix score">
+      <change afterPath="$PROJECT_DIR$/resources/dragon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BossSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/BossSprite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622050676795</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Resized little man and platforms">
+      <created>1622052290067</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1622052290068</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +312,7 @@
     <MESSAGE value="fixed game over screen and created spot for emily to add win image" />
     <MESSAGE value="ok i fixed some spacing sorry jade lol" />
     <MESSAGE value="fix score" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix score" />
+    <MESSAGE value="Resized little man and platforms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resized little man and platforms" />
   </component>
 </project>

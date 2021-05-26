@@ -16,6 +16,7 @@ lifeim = pygame.image.load(resourcesS + "heart.png")
 background_image_filename = resourcesS + 'backgroundimg.png'
 splashscreen_image_filename = resourcesS + 'splashscreen.png'
 sprite_image_filename = resourcesS + 'playerimg.png'
+gameover_image_filename = resourcesS + "GameOver.png"
 pygame.init()
 pygame.mixer.init()
 screen = pygame.display.set_mode((SCREENW, SCREENH), 0, 32)
@@ -37,3 +38,4 @@ splashrect.center = (SCREENW / 2, SCREENH / 2)
 background = pygame.image.load(background_image_filename).convert()
 splashscreen = pygame.image.load(splashscreen_image_filename).convert()
 spriteim = pygame.image.load(sprite_image_filename).convert_alpha()
+gameoverim = pygame.image.load(gameover_image_filename).convert()

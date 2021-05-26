@@ -1,6 +1,5 @@
-import pygame
 from Resources import *
-from GlobalVariables import *
+
 
 class BossSprite(pygame.sprite.Sprite):
     PW = None
@@ -12,8 +11,8 @@ class BossSprite(pygame.sprite.Sprite):
         self.PH = bossim.get_height()
         self.image = bossim
         self.rect = self.image.get_rect()
-        self.rect.centerx = SCREENW/2
-        self.rect.centery = self.PH/2
+        self.rect.centerx = SCREENW / 2
+        self.rect.centery = self.PH / 2
         self.mask = pygame.mask.from_surface(self.image)
         self.health = 10
         self.spawn = False
@@ -63,6 +62,7 @@ class BossSprite(pygame.sprite.Sprite):
 
     def dead(self):
         return self.health < 0
+
 
 class BossBullet(pygame.sprite.Sprite):
     PW = None

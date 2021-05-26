@@ -1,6 +1,4 @@
-import pygame
 from Resources import *
-from GlobalVariables import *
 
 
 class PlayerSprite(pygame.sprite.Sprite):
@@ -28,6 +26,7 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.bottom = False
         self.damage = 1
         self.landed = False
+        self.test2 = False
 
     def moveRight(self):
         if self.rect.centerx == SCREENW:
@@ -42,9 +41,9 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.image = leftim
 
     def update(self):
-        if self.jumped == False and not self.bottom:
+        if self.jumped is False and not self.bottom:
             self.rect.centery += 1
-        if self.jumped == True:
+        if self.jumped is True:
             self.rect.centery -= 1
             self.jumpnow += 1.25
         if self.jumpheight == self.jumpnow:

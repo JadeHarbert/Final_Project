@@ -18,7 +18,6 @@ win_image_filename = resourcesS + 'winscreen.png'
 gameover_image_filename = resourcesS + 'GameOver.png'
 splashscreen_image_filename = resourcesS + 'splashscreen.png'
 sprite_image_filename = resourcesS + 'playerimg.png'
-gameover_image_filename = resourcesS + "GameOver.png"
 pygame.init()
 pygame.mixer.init()
 screen = pygame.display.set_mode((SCREENW, SCREENH), 0, 32)

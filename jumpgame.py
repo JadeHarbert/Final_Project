@@ -87,7 +87,7 @@ while loop:
     spawnLife = True
 
     global SCORE
-    SCORE = 0
+    SCORE = 1
 
     lose = False
     win = False
@@ -157,20 +157,18 @@ while loop:
         if keys[pygame.K_w]:
             if bottom:
                 player.jump()
-                # if player.addpoint:
-                    # SCORE += 1
                 if SCORE % 5 == 0 and spawnAstroid:
                     for x in range(int(SCORE / 5)):
-                        enemy_sprites.add(AstroidSprite((
-                            randint(enemyim.get_width() // 2, SCREENW), -enemyim.get_height() - 75), enemyim))
+                        enemy_sprites.add(AstroidSprite((randint(enemyim.get_width() // 2, SCREENW),
+                                                         -enemyim.get_height() - 75), enemyim))
                     spawnAstroid = False
                 elif SCORE % 6 == 0:
                     spawnAstroid = True
                 if SCORE % 10 == 0 and spawnTear:
-                    enemy_sprites.add(TearSprite((
-                        randint(holeim.get_width() // 2, SCREENW), -holeim.get_height() - 75)))
+                    enemy_sprites.add(TearSprite((randint(holeim.get_width() // 2, SCREENW),
+                                                  -holeim.get_height() - 75)))
                     spawnTear = False
-                elif SCORE % 11 >= 0:
+                elif SCORE % 11 == 0:
                     spawnTear = True
                 if SCORE % 7 == 0 and spawnEraser:
                     enemy_sprites.add(EraserSprite((

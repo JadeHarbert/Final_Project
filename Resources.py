@@ -13,6 +13,7 @@ holeim = pygame.image.load(resourcesS + "paperhole.png")
 bossim = pygame.image.load(resourcesS + "ufoboss.png")
 eraserim = pygame.image.load(resourcesS + "eraserimg.png")
 lifeim = pygame.image.load(resourcesS + "heart.png")
+dragonim = pygame.image.load(resourcesS + "")
 background_image_filename = resourcesS + 'backgroundimg.png'
 win_image_filename = resourcesS + 'winscreen.png'
 gameover_image_filename = resourcesS + 'GameOver.png'

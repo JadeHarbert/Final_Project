@@ -1,7 +1,7 @@
 from Resources import *
 
 
-class BossSprite(pygame.sprite.Sprite):
+class DragonSprite(pygame.sprite.Sprite):
     PW = None
     PH = None
 

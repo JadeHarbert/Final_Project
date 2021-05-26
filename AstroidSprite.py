@@ -1,5 +1,6 @@
 import pygame
 
+
 class AstroidSprite(pygame.sprite.Sprite):
     PW = None
     PH = None
@@ -18,5 +19,3 @@ class AstroidSprite(pygame.sprite.Sprite):
 
     def update(self, val):
         self.rect.centery += 2
-
-

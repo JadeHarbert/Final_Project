@@ -11,6 +11,7 @@ from PlatformSprite import *
 from PlayerSprite import *
 from TearSprite import *
 from DragonSprite import *
+from SpiderSprite import *
 
 screen.blit(splash, splashrect.topleft)
 clock = pygame.time.Clock()
@@ -73,13 +74,17 @@ while loop:
     bullet_group = pygame.sprite.Group()
     enemy_bullet_group = pygame.sprite.Group()
     fire_bullet_group = pygame.sprite.Group()
+    web_bullet_group = pygame.sprite.Group()
 
     boss1 = BossSprite()
     boss2 = DragonSprite()
+    boss3 = SpiderSprite()
     boss_group = pygame.sprite.Group()
     boss_group.add(boss1)
     dragon_group = pygame.sprite.Group()
     dragon_group.add(boss2)
+    spider_group = pygame.sprite.Group()
+    spider_group.add(boss3)
 
     spawnTear = True
 
@@ -229,11 +234,17 @@ while loop:
                 enemysound.play()
                 boss2.hit(player.damage)
                 bullet_group.remove(bullets)
+            if pygame.sprite.collide_mask(bullets, boss3) and boss3.spawn:
+                enemysound.play()
+                boss3.hit(player.damage)
+                bullet_group.remove(bullets)
 
         enemy_bullet_group.update()
         enemy_bullet_group.draw(screen)
         fire_bullet_group.update()
         fire_bullet_group.draw(screen)
+        web_bullet_group.update()
+        web_bullet_group.draw(screen)
 
         if SCORE >= 5 and not boss1.dead():
             boss1.spawnBoss()
@@ -243,6 +254,10 @@ while loop:
             boss2.spawnBoss2()
             dragon_group.update()
             dragon_group.draw(screen)
+        if SCORE >= 15 and not boss3.dead():
+            boss3.spawnBoss3()
+            spider_group.update()
+            spider_group.draw(screen)
 
         for enemybullets in boss1.getBullets():
             if pygame.sprite.collide_mask(enemybullets, player):
@@ -261,8 +276,17 @@ while loop:
                 boss2.removeBullet(firebullets)
                 break
 
+        for webbullets in boss3.getBullets():
+            if pygame.sprite.collide_mask(webbullets, player):
+                player.life -= 1
+                boss3.removeBullet(webbullets)
+            if webbullets.rect.centery >= SCREENH:
+                boss3.removeBullet(webbullets)
+                break
+
         enemy_bullet_group = boss1.getBullets()
         fire_bullet_group = boss2.getBullets()
+        web_bullet_group = boss3.getBullets()
         player.update()
         player_group.draw(screen)
         platform_group.update(player.jumped)

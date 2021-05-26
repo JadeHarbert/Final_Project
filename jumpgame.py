@@ -103,7 +103,7 @@ while loop:
             gameloop = False
             gameover = True
             lose = True
-        if boss2.dead():
+        if boss3.dead():
             gameloop = False
             gameover = True
             win = True

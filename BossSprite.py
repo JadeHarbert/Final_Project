@@ -23,6 +23,8 @@ class BossSprite(pygame.sprite.Sprite):
         self.direction = "right"
         self.isTearSprite = False
 
+        self.isTearSprite = False
+
     def update(self):
         if self.direction == "right":
             self.rect.centerx += 1

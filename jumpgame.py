@@ -32,10 +32,9 @@ while showSplash:
 
 def show_gm_screen():
     screen.blit(background2, (0, 0))
-    screen.blit(font.render(("Score: " + str(SCORE)), False, (0, 0, 0)), (SCREENW / 2 - 60, SCREENH / 2))
-    screen.blit(font.render(("GAME OVER!" + str()), False, (0, 0, 0)), (SCREENW / 2 - 95, SCREENH / 2 - 80))
-    screen.blit(font.render(("Press any key to play again" + str()), False, (0, 0, 0)),
-                (SCREENW / 2 - 200, SCREENH / 2 + 80))
+    screen.blit(font.render(("Score: " + str(SCORE)), False, (0, 0, 0)), (SCREENW / 2 - 60, SCREENH / 4 - 45))
+    #screen.blit(font.render(("GAME OVER!" + str()), False, (0, 0, 0)), (SCREENW / 2 - 95, SCREENH / 2 - 80))
+    #screen.blit(font.render(("Press any key to play again" + str()), False, (0, 0, 0)), (SCREENW / 2 - 200, SCREENH / 2 + 80))
 
 
 def show_win_screen():
@@ -160,8 +159,6 @@ while loop:
             player.moveLeft()
         if keys[pygame.K_d]:
             player.moveRight()
-        if keys[pygame.K_s]:
-            player.moveDown()
         if keys[pygame.K_w]:
             if bottom:
                 player.jump()
@@ -178,7 +175,7 @@ while loop:
                     enemy_sprites.add(TearSprite((
                         randint(holeim.get_width() // 2, SCREENW), -holeim.get_height() - 75)))
                     spawnTear = False
-                elif SCORE % 11 == 0:
+                elif SCORE % 11 >= 0:
                     spawnTear = True
                 if SCORE % 7 == 0 and spawnEraser:
                     enemy_sprites.add(EraserSprite((
@@ -202,8 +199,9 @@ while loop:
         for enemy in enemy_sprites:
             if pygame.sprite.collide_mask(enemy, player):
                 if enemy.isTearSprite:
-                    player.life = 0
                     hitsound.play()
+                    enemy_sprites.remove(enemy)
+                    player.life = 0
                 else:
                     hitsound.play()
                     enemy_sprites.remove(enemy)
@@ -232,7 +230,7 @@ while loop:
         enemy_bullet_group.update()
         enemy_bullet_group.draw(screen)
 
-        if SCORE >= 50 and not boss1.dead():
+        if SCORE >= 25 and not boss1.dead():
             boss1.spawnBoss()
             boss_group.update()
             boss_group.draw(screen)

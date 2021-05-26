@@ -32,10 +32,9 @@ while showSplash:
 
 def show_gm_screen():
     screen.blit(background2, (0, 0))
-    screen.blit(font.render(("Score: " + str(SCORE)), False, (0, 0, 0)), (SCREENW / 2 - 60, SCREENH / 2))
-    screen.blit(font.render(("GAME OVER!" + str()), False, (0, 0, 0)), (SCREENW / 2 - 95, SCREENH / 2 - 80))
-    screen.blit(font.render(("Press any key to play again" + str()), False, (0, 0, 0)),
-                (SCREENW / 2 - 200, SCREENH / 2 + 80))
+    screen.blit(font.render(("Score: " + str(SCORE)), False, (0, 0, 0)), (SCREENW / 2 - 60, SCREENH / 4 - 45))
+    #screen.blit(font.render(("GAME OVER!" + str()), False, (0, 0, 0)), (SCREENW / 2 - 95, SCREENH / 2 - 80))
+    #screen.blit(font.render(("Press any key to play again" + str()), False, (0, 0, 0)), (SCREENW / 2 - 200, SCREENH / 2 + 80))
 
 
 def show_win_screen():
@@ -96,6 +95,8 @@ while loop:
     win = False
     while gameloop:
         screen.blit(background, (0, 0))
+
+
         if player.life <= 0:
             gameloop = False
             gameover = True
@@ -148,6 +149,11 @@ while loop:
 
         player.colliding(testcollision, bottom)
 
+
+        if player.landed and player.test2 and player.jumpnow == 0:
+            SCORE += 1
+            player.landing()
+
         keys = pygame.key.get_pressed()
         if keys[pygame.K_a]:
             player.moveLeft()
@@ -156,7 +162,8 @@ while loop:
         if keys[pygame.K_w]:
             if bottom:
                 player.jump()
-                SCORE += 1
+                #if player.addpoint:
+                    #SCORE += 1
                 if SCORE % 5 == 0 and spawnAstroid:
                     for x in range(int(SCORE / 5)):
                         enemy_sprites.add(AstroidSprite((
@@ -237,6 +244,7 @@ while loop:
                 boss1.removeBullet(enemybullets)
                 break
 
+
         enemy_bullet_group = boss1.getBullets()
         player.update()
         player_group.draw(screen)
@@ -250,6 +258,7 @@ while loop:
         bullet_group.draw(screen)
         pygame.display.update()
         playsound = True
+
 
     while gameover:
         while lose:

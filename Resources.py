@@ -14,7 +14,6 @@ bossim = pygame.image.load(resourcesS + "ufoboss.png")
 eraserim = pygame.image.load(resourcesS + "eraserimg.png")
 lifeim = pygame.image.load(resourcesS + "heart.png")
 background2 = pygame.image.load(resourcesS + "GameOver.png")
-# background3 = pygame.image.load(resourcesS + "WinGame.png") Emily when you make the win screen you can put the name here
 background_image_filename = resourcesS + 'backgroundimg.png'
 splashscreen_image_filename = resourcesS + 'splashscreen.png'
 sprite_image_filename = resourcesS + 'playerimg.png'

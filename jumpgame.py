@@ -10,6 +10,7 @@ from LifeSprite import *
 from PlatformSprite import *
 from PlayerSprite import *
 from TearSprite import *
+from DragonSprite import *
 
 screen.blit(splash, splashrect.topleft)
 clock = pygame.time.Clock()

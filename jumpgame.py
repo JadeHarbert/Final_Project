@@ -82,7 +82,7 @@ while loop:
 
     spawnLife = True
 
-    global SCORE
+    # global SCORE
     SCORE = 1
 
     lose = False
@@ -132,7 +132,7 @@ while loop:
         bottom = False
         for plat in platform_group:
             if plat.rect.centery == SCREENH:
-                platform_group.add(PlatformSprite((randint(25, SCREENH-25), randint(layer, layer + 65)), platformim))
+                platform_group.add(PlatformSprite((randint(25, SCREENH - 25), randint(layer, layer + 65)), platformim))
                 platform_group.remove(plat)
             if pygame.sprite.collide_mask(plat, player):
                 testcollision = True

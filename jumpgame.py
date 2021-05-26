@@ -1,16 +1,15 @@
-import pygame
-from pygame.locals import *
 from random import randint
 from sys import exit
-from PlayerSprite import *
+
+from pygame.locals import *
+
 from AstroidSprite import *
-from PlatformSprite import *
-from Resources import *
-from GlobalVariables import *
 from BossSprite import *
-from TearSprite import *
 from EraserSprite import *
 from LifeSprite import *
+from PlatformSprite import *
+from PlayerSprite import *
+from TearSprite import *
 
 screen.blit(splash, splashrect.topleft)
 clock = pygame.time.Clock()

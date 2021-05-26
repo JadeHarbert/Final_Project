@@ -71,10 +71,12 @@ while loop:
 
     bullet_group = pygame.sprite.Group()
     enemy_bullet_group = pygame.sprite.Group()
+    fire_bullet_group = pygame.sprite.Group()
 
     boss1 = BossSprite()
+    boss2 = DragonSprite()
     boss_group = pygame.sprite.Group()
-    boss_group.add(boss1)
+    boss_group.add(boss1, boss2)
 
     spawnTear = True
 
@@ -217,12 +219,22 @@ while loop:
                 enemysound.play()
                 boss1.hit(player.damage)
                 bullet_group.remove(bullets)
+            if pygame.sprite.collide_mask(bullets, boss2) and boss2.spawn:
+                enemysound.play()
+                boss2.hit(player.damage)
+                bullet_group.remove(bullets)
 
         enemy_bullet_group.update()
         enemy_bullet_group.draw(screen)
+        fire_bullet_group.update()
+        fire_bullet_group.draw(screen)
 
         if SCORE >= 25 and not boss1.dead():
             boss1.spawnBoss()
+            boss_group.update()
+            boss_group.draw(screen)
+        if SCORE >= 50 and boss1.dead():
+            boss2.spawnBoss()
             boss_group.update()
             boss_group.draw(screen)
 
@@ -235,7 +247,16 @@ while loop:
                 boss1.removeBullet(enemybullets)
                 break
 
+        for firebullets in boss2.getBullets():
+            if pygame.sprite.collide_mask(firebullets, player):
+                player.life -= 2
+                boss2.removeBullet(firebullets)
+            if firebullets.rect.centery >= SCREENH:
+                boss2.removeBullet(firebullets)
+                break
+
         enemy_bullet_group = boss1.getBullets()
+        fire_bullet_group = boss2.getBullets()
         player.update()
         player_group.draw(screen)
         platform_group.update(player.jumped)

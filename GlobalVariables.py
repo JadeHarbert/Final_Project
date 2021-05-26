@@ -2,5 +2,5 @@ SCREENW = 520
 SCREENH = 640
 GRAV = 600
 global SCORE
-SCORE = 0
+SCORE = 1
 spawnAstroid = False

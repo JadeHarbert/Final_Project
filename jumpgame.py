@@ -33,12 +33,10 @@ while showSplash:
 def show_gm_screen():
     screen.blit(background2, (0, 0))
     screen.blit(font.render(("Score: " + str(SCORE)), False, (0, 0, 0)), (SCREENW / 2 - 60, SCREENH / 4 - 45))
-    #screen.blit(font.render(("GAME OVER!" + str()), False, (0, 0, 0)), (SCREENW / 2 - 95, SCREENH / 2 - 80))
-    #screen.blit(font.render(("Press any key to play again" + str()), False, (0, 0, 0)), (SCREENW / 2 - 200, SCREENH / 2 + 80))
 
 
 def show_win_screen():
-    screen.blit(background2, (0, 0))
+    #screen.blit(background3, (0, 0))
     screen.blit(font.render(("Score: " + str(SCORE)), False, (0, 0, 0)), (SCREENW / 2 - 60, SCREENH / 2))
     screen.blit(font.render(("YOU WIN!" + str()), False, (0, 0, 0)), (SCREENW / 2 - 60, SCREENH / 2 - 80))
     screen.blit(font.render(("Press any key to play again" + str()), False, (0, 0, 0)),

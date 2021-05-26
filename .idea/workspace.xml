@@ -25,14 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="deleted some old resources">
-      <change beforePath="$PROJECT_DIR$/resources/asteroidimg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/background2img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/blackhole.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/bossimg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lifeimg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/madboss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ufoboss.png" beforeDir="false" />
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="fixed game over screen and created spot for emily to add win image">
+      <change beforePath="$PROJECT_DIR$/jumpgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumpgame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +83,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\melni\PycharmProjects\gametwo22\resources" />
       <recent name="$PROJECT_DIR$/resources" />
+      <recent name="C:\Users\melni\PycharmProjects\gametwo22\resources" />
       <recent name="C:\Users\melni\PycharmProjects\gametwo22" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -230,7 +224,28 @@
       <option name="project" value="LOCAL" />
       <updated>1621970782177</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="deleted some old resources for real this time">
+      <created>1622049456570</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622049456570</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixed bugs">
+      <created>1622049606198</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622049606198</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fixed game over screen and created spot for emily to add win image">
+      <created>1622050091937</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1622050091937</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +285,9 @@
     <MESSAGE value="added jump mechanics" />
     <MESSAGE value="paperhole.png update" />
     <MESSAGE value="life update to heart.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="life update to heart.png" />
+    <MESSAGE value="deleted some old resources for real this time" />
+    <MESSAGE value="fixed bugs" />
+    <MESSAGE value="fixed game over screen and created spot for emily to add win image" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed game over screen and created spot for emily to add win image" />
   </component>
 </project>

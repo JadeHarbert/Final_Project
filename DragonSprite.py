@@ -14,11 +14,11 @@ class DragonSprite(pygame.sprite.Sprite):
         self.rect.centerx = SCREENW / 2
         self.rect.centery = self.PH / 2
         self.mask = pygame.mask.from_surface(self.image)
-        self.health = 40
+        self.health = 60
         self.spawn = False
         self.bulletList = []
         self.timer = 0
-        self.timermax = 250
+        self.timermax = 100
         self.direction = "right"
         self.isTearSprite = False
 

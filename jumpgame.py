@@ -215,8 +215,12 @@ while loop:
         time_passed = clock.tick(120)
         time_passed_seconds = time_passed / 1000.0
 
+        timmyTime = pygame.time.get_ticks()
+        total_time = timmyTime // 1000
+
         screen.blit(font.render(("Score: " + str(SCORE)), False, (0, 0, 0)), (0, 0))
         screen.blit(font.render(("Lives: " + str(player.life)), False, (0, 0, 0)), (SCREENW - 125, 0))
+        screen.blit(font.render(("Time: " + str(total_time)), False, (0, 0, 0)), (200, 0))
 
         for enemy in enemy_sprites:
             if pygame.sprite.collide_mask(enemy, player):

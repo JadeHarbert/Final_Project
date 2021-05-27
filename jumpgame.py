@@ -318,14 +318,12 @@ while loop:
                 player.life -= 1
                 boss3.removeBullet(webbullets)
                 last_update = now
-                print("webbed")
             if webbullets.rect.centery >= SCREENH:
                 boss3.removeBullet(webbullets)
                 break
 
-        if player.webbed and now - last_update > 50000:
+        if player.webbed and now - last_update > 2000:
             player.webbed = False
-            print("unwebbed")
 
         enemy_bullet_group = boss1.getBullets()
         fire_bullet_group = boss2.getBullets()

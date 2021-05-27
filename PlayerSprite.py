@@ -44,6 +44,8 @@ class PlayerSprite(pygame.sprite.Sprite):
             self.image = leftim
 
     def update(self):
+        if self.webbed:
+            self.image = stuckBabyim
         if self.jumped is False and not self.bottom:
             self.rect.centery += 1
         if self.jumped is True:

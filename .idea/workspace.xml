@@ -25,11 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="i might have done something">
-      <change beforePath="$PROJECT_DIR$/BossSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/BossSprite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DragonSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/DragonSprite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpiderSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpiderSprite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumpgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumpgame.py" afterDir="false" />
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="Added in spider">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +154,7 @@
       <workItem from="1621964903811" duration="2052000" />
       <workItem from="1621968296409" duration="711000" />
       <workItem from="1621985252269" duration="324000" />
+      <workItem from="1622140485865" duration="1382000" />
     </task>
     <task id="LOCAL-00001" summary="added class files">
       <created>1621479288989</created>
@@ -390,8 +388,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="i might have done something" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Final_Project$jumpgame.coverage" NAME="jumpgame Coverage Results" MODIFIED="1622139718550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Final_Project$PlayerSprite.coverage" NAME="PlayerSprite Coverage Results" MODIFIED="1621968706299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Final_Project$PlayerSprite.coverage" NAME="PlayerSprite Coverage Results" MODIFIED="1621966252751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gametwo22$jumpgame.coverage" NAME="jumpgame Coverage Results" MODIFIED="1621872803587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Final_Project$jumpgame.coverage" NAME="jumpgame Coverage Results" MODIFIED="1622139924143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

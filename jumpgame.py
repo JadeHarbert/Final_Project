@@ -1,7 +1,6 @@
 from random import randint
 from sys import exit
 
-import pygame.time
 from pygame.locals import *
 
 from AstroidSprite import *
@@ -106,6 +105,8 @@ while loop:
 
     lose = False
     win = False
+    timmyTime = pygame.time.get_ticks()
+    now_time = timmyTime
     while gameloop:
         screen.blit(background, (0, 0))
         if player.life <= 0:
@@ -216,7 +217,7 @@ while loop:
         time_passed_seconds = time_passed / 1000.0
 
         timmyTime = pygame.time.get_ticks()
-        total_time = timmyTime // 1000
+        total_time = (timmyTime - now_time) // 1000
 
         screen.blit(font.render(("Score: " + str(SCORE)), False, (0, 0, 0)), (0, 0))
         screen.blit(font.render(("Lives: " + str(player.life)), False, (0, 0, 0)), (SCREENW - 125, 0))
@@ -361,6 +362,8 @@ while loop:
                     gameover = False
                     gameloop = True
                     lose = False
+                    now_time = timmyTime
+                    total_time = 0
             pygame.display.update()
         while win:
             keys = pygame.key.get_pressed()
@@ -376,4 +379,6 @@ while loop:
                     gameover = False
                     gameloop = True
                     win = False
+                    now_time = timmyTime
+                    total_time = 0
             pygame.display.update()

@@ -22,8 +22,6 @@ class SpiderSprite(pygame.sprite.Sprite):
         self.direction = "right"
         self.isTearSprite = False
 
-        self.isTearSprite = False
-
     def update(self):
         if self.direction == "right":
             self.rect.centerx += 1
@@ -70,7 +68,7 @@ class BossBullet(pygame.sprite.Sprite):
 
     def __init__(self, loc):
         super().__init__()
-        self.PW = spider.get_width()
+        self.PW = spiderim.get_width()
         self.PH = spiderim.get_height()
         self.image = webim
         self.rect = self.image.get_rect()

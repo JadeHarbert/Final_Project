@@ -170,23 +170,23 @@ while loop:
                     spawnAstroid = False
                 elif SCORE % 6 == 0:
                     spawnAstroid = True
-                if SCORE % 10 == 0 and spawnTear:
+                if SCORE % 8 == 0 and spawnTear:
                     enemy_sprites.add(TearSprite((randint(holeim.get_width() // 2, SCREENW),
                                                   -holeim.get_height() - 75)))
                     spawnTear = False
-                elif SCORE % 11 == 0:
+                elif SCORE % 9 == 0:
                     spawnTear = True
-                if SCORE % 7 == 0 and spawnEraser:
+                if SCORE % 12 == 0 and spawnEraser:
                     enemy_sprites.add(EraserSprite((
                         randint(eraserim.get_width() // 2, SCREENW), -eraserim.get_height() - 75)))
                     spawnEraser = False
-                elif SCORE % 8 == 0:
+                elif SCORE % 13 == 0:
                     spawnEraser = True
-                if SCORE % 15 == 0 and spawnLife:
+                if SCORE % 10 == 0 and spawnLife:
                     life_sprites.add(LifeSprite((
                         randint(lifeim.get_width() // 2, SCREENW), -lifeim.get_height() - 75)))
                     spawnLife = False
-                elif SCORE % 16 == 0:
+                elif SCORE % 11 == 0:
                     spawnLife = True
 
         time_passed = clock.tick(120)

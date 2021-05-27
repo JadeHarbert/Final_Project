@@ -191,11 +191,11 @@ while loop:
                     spawnLife = False
                 elif SCORE % 11 == 0:
                     spawnLife = True
-                if SCORE % 12 == 0 and spawnChaser:
+                if SCORE % 14 == 0 and spawnChaser:
                     enemy_sprites.add(ChasingSprite((
                         randint(eraserim.get_width() // 2, SCREENW), -lifeim.get_height() - 75), player))
                     spawnChaser = False
-                elif SCORE % 13 == 0:
+                elif SCORE % 15 == 0:
                     spawnChaser = True
 
         time_passed = clock.tick(120)
@@ -233,6 +233,12 @@ while loop:
                 lifesound.play()
                 life_sprites.remove(life)
                 player.life += 1
+
+        for web in web_bullet_group:
+            if pygame.sprite.collide_mask(web, player):
+                hitsound.play()
+                player.life -= 1
+                web_bullet_group.remove(web)
 
         for bullets in bullet_group:
             if pygame.sprite.collide_mask(bullets, boss1) and boss1.spawn and boss1.health >= 0:

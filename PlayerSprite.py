@@ -27,18 +27,21 @@ class PlayerSprite(pygame.sprite.Sprite):
         self.damage = 1
         self.landed = False
         self.test2 = False
+        self.webbed = False
 
     def moveRight(self):
-        if self.rect.centerx == SCREENW:
-            self.rect.centerx = 0
-        self.rect.centerx += 1
-        self.image = rightim
+        if not self.webbed:
+            if self.rect.centerx == SCREENW:
+                self.rect.centerx = 0
+            self.rect.centerx += 1
+            self.image = rightim
 
     def moveLeft(self):
-        if self.rect.centerx == 0:
-            self.rect.centerx = SCREENW
-        self.rect.centerx -= 1
-        self.image = leftim
+        if not self.webbed:
+            if self.rect.centerx == 0:
+                self.rect.centerx = SCREENW
+            self.rect.centerx -= 1
+            self.image = leftim
 
     def update(self):
         if self.jumped is False and not self.bottom:
@@ -65,11 +68,12 @@ class PlayerSprite(pygame.sprite.Sprite):
             self.test2 = True
 
     def jump(self):
-        if self.collide and self.bottom and self.jumpnow == 0:
-            self.jumped = True
-            jumpsound.play()
-            self.image = jumpim
-            self.landed = True
+        if not self.webbed:
+            if self.collide and self.bottom and self.jumpnow == 0:
+                self.jumped = True
+                jumpsound.play()
+                self.image = jumpim
+                self.landed = True
 
 
 class BulletSprite(pygame.sprite.Sprite):

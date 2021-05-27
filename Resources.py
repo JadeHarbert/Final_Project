@@ -17,6 +17,7 @@ dragonim = pygame.image.load(resourcesS + "dragon.png")
 fireim = pygame.image.load(resourcesS + "fireball.png")
 spiderim = pygame.image.load(resourcesS + "spider.png")
 webim = pygame.image.load(resourcesS + "spiderweb.png")
+stuckBabyim = pygame.image.load(resourcesS + "playerstuck.png")
 background_image_filename = resourcesS + 'backgroundimg.png'
 win_image_filename = resourcesS + 'winscreen.png'
 gameover_image_filename = resourcesS + 'GameOver.png'

@@ -11,6 +11,7 @@ from PlatformSprite import *
 from PlayerSprite import *
 from TearSprite import *
 from DragonSprite import *
+from ChasingSprite import *
 from SpiderSprite import *
 
 screen.blit(splash, splashrect.topleft)
@@ -91,6 +92,8 @@ while loop:
     spawnEraser = True
 
     spawnLife = True
+
+    spawnChaser = True
 
     # global SCORE
     SCORE = 1
@@ -188,6 +191,12 @@ while loop:
                     spawnLife = False
                 elif SCORE % 11 == 0:
                     spawnLife = True
+                if SCORE % 12 == 0 and spawnChaser:
+                    enemy_sprites.add(ChasingSprite((
+                        randint(eraserim.get_width() // 2, SCREENW), -lifeim.get_height() - 75), player))
+                    spawnChaser = False
+                elif SCORE % 13 == 0:
+                    spawnChaser = True
 
         time_passed = clock.tick(120)
         time_passed_seconds = time_passed / 1000.0
@@ -214,7 +223,7 @@ while loop:
                         enemy_sprites.remove(enemy)
                     else:
                         bullet_group.remove(bullets)
-                if bullets.rect.centery < 0:
+                if bullets.rect.centery < -250:
                     bullet_group.remove(bullets)
                 if bullets.rect.centery > SCREENH:
                     bullet_group.remove(bullets)
@@ -226,11 +235,11 @@ while loop:
                 player.life += 1
 
         for bullets in bullet_group:
-            if pygame.sprite.collide_mask(bullets, boss1) and boss1.spawn:
+            if pygame.sprite.collide_mask(bullets, boss1) and boss1.spawn and boss1.health >= 0:
                 enemysound.play()
                 boss1.hit(player.damage)
                 bullet_group.remove(bullets)
-            if pygame.sprite.collide_mask(bullets, boss2) and boss2.spawn:
+            if pygame.sprite.collide_mask(bullets, boss2) and boss2.spawn and boss2.health >= 0:
                 enemysound.play()
                 boss2.hit(player.damage)
                 bullet_group.remove(bullets)

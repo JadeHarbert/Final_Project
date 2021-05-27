@@ -18,7 +18,7 @@ class DragonSprite(pygame.sprite.Sprite):
         self.spawn = False
         self.bulletList = []
         self.timer = 0
-        self.timermax = 100
+        self.timermax = 250
         self.direction = "right"
         self.isTearSprite = False
 

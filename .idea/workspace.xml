@@ -25,9 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="spider web smaller">
-      <change afterPath="$PROJECT_DIR$/resources/playerstuck.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources.py" afterDir="false" />
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="changed when enemies spawn">
+      <change beforePath="$PROJECT_DIR$/jumpgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumpgame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,28 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622059098391</updated>
     </task>
-    <task id="LOCAL-00022" summary="spider web">
-      <created>1622135899141</created>
+    <task id="LOCAL-00022" summary="changed when enemies spawn">
+      <created>1622135800018</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1622135899141</updated>
+      <updated>1622135800018</updated>
     </task>
-    <task id="LOCAL-00023" summary="spider web TRY 2">
-      <created>1622136060420</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1622136060420</updated>
-    </task>
-    <task id="LOCAL-00024" summary="spider web smaller">
-      <created>1622136590840</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1622136590841</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,9 +358,7 @@
     <MESSAGE value="Coding for 3rd boss (Spider)" />
     <MESSAGE value="fixed spider boss" />
     <MESSAGE value="Update to Master" />
-    <MESSAGE value="spider web" />
-    <MESSAGE value="spider web TRY 2" />
-    <MESSAGE value="spider web smaller" />
-    <option name="LAST_COMMIT_MESSAGE" value="spider web smaller" />
+    <MESSAGE value="changed when enemies spawn" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed when enemies spawn" />
   </component>
 </project>

@@ -25,9 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="spider web TRY 2">
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="spider web smaller">
+      <change afterPath="$PROJECT_DIR$/resources/playerstuck.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/spiderweb.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/spiderweb.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622136060420</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="spider web smaller">
+      <created>1622136590840</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1622136590841</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +375,7 @@
     <MESSAGE value="Update to Master" />
     <MESSAGE value="spider web" />
     <MESSAGE value="spider web TRY 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="spider web TRY 2" />
+    <MESSAGE value="spider web smaller" />
+    <option name="LAST_COMMIT_MESSAGE" value="spider web smaller" />
   </component>
 </project>

@@ -14,7 +14,7 @@ class SpiderSprite(pygame.sprite.Sprite):
         self.rect.centerx = SCREENW / 2
         self.rect.centery = self.PH / 2
         self.mask = pygame.mask.from_surface(self.image)
-        self.health = 60
+        self.health = 85
         self.spawn = False
         self.bulletList = []
         self.timer = 0

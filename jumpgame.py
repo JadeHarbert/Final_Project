@@ -147,7 +147,6 @@ while loop:
                     bullet_group.add(bullet)
                     shootsound.play()
 
-
         now = pygame.time.get_ticks()
         testcollision = False
         bottom = False
@@ -181,12 +180,12 @@ while loop:
                     spawnAstroid = False
                 elif SCORE % 6 == 0:
                     spawnAstroid = True
-                if SCORE % 12 == 0 and spawnHole:
-                    for x in range(int(SCORE / 12)):
+                if SCORE % 60 == 0 and spawnHole:
+                    for x in range(int(SCORE / 60)):
                         hole_sprites.add(HoleSprite((randint(holeim.get_width() // 2, SCREENW), -holeim.get_height()
                                                      - 75), holeim))
                     spawnHole = False
-                elif SCORE % 13 == 0:
+                elif SCORE % 61 == 0:
                     spawnHole = True
                 if SCORE % 8 == 0 and spawnTear:
                     enemy_sprites.add(TearSprite((randint(holeim.get_width() // 2, SCREENW),
@@ -206,11 +205,11 @@ while loop:
                     spawnLife = False
                 elif SCORE % 11 == 0:
                     spawnLife = True
-                if SCORE % 14 == 0 and spawnChaser:
+                if SCORE % 35 == 0 and spawnChaser:
                     enemy_sprites.add(ChasingSprite((
                         randint(eraserim.get_width() // 2, SCREENW), -eraserim.get_height() - 75), player))
                     spawnChaser = False
-                elif SCORE % 15 == 0:
+                elif SCORE % 36 == 0:
                     spawnChaser = True
 
         time_passed = clock.tick(120)
@@ -286,15 +285,15 @@ while loop:
         web_bullet_group.update()
         web_bullet_group.draw(screen)
 
-        if SCORE >= 5 and not boss1.dead():
+        if SCORE >= 25 and not boss1.dead():
             boss1.spawnBoss()
             boss_group.update()
             boss_group.draw(screen)
-        if SCORE >= 10 and not boss2.dead():
+        if SCORE >= 50 and not boss2.dead():
             boss2.spawnBoss2()
             dragon_group.update()
             dragon_group.draw(screen)
-        if SCORE >= 15 and not boss3.dead():
+        if SCORE >= 75 and not boss3.dead():
             boss3.spawnBoss3()
             spider_group.update()
             spider_group.draw(screen)

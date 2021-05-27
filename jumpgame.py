@@ -1,6 +1,7 @@
 from random import randint
 from sys import exit
 
+import pygame.time
 from pygame.locals import *
 
 from AstroidSprite import *
@@ -95,6 +96,8 @@ while loop:
 
     spawnChaser = True
 
+    last_update = 0
+
     # global SCORE
     SCORE = 1
 
@@ -141,6 +144,8 @@ while loop:
                     bullet_group.add(bullet)
                     shootsound.play()
 
+
+        now = pygame.time.get_ticks()
         testcollision = False
         bottom = False
         for plat in platform_group:
@@ -293,11 +298,18 @@ while loop:
 
         for webbullets in boss3.getBullets():
             if pygame.sprite.collide_mask(webbullets, player):
+                player.webbed = True
                 player.life -= 1
                 boss3.removeBullet(webbullets)
+                last_update = now
+                print("webbed")
             if webbullets.rect.centery >= SCREENH:
                 boss3.removeBullet(webbullets)
                 break
+
+        if player.webbed and now - last_update > 50000:
+            player.webbed = False
+            print("unwebbed")
 
         enemy_bullet_group = boss1.getBullets()
         fire_bullet_group = boss2.getBullets()

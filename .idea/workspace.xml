@@ -25,7 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="changed when enemies spawn">
+    <list default="true" id="bd993c56-ac32-4154-9190-3f42cf62c7fb" name="Default Changelist" comment="added web functions">
+      <change afterPath="$PROJECT_DIR$/HoleSprite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GlobalVariables.py" beforeDir="false" afterPath="$PROJECT_DIR$/GlobalVariables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jumpgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumpgame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +61,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
   </component>
   <component name="JupyterTrust" id="32fb4301-0c6c-4142-8d7f-1c0101b074c0" />
   <component name="ProjectId" id="1smRjN8KwlGm7j3S7BgC618ARaG" />
@@ -308,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622135800018</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added web functions">
+      <created>1622136332262</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1622136332262</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,6 +370,7 @@
     <MESSAGE value="fixed spider boss" />
     <MESSAGE value="Update to Master" />
     <MESSAGE value="changed when enemies spawn" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed when enemies spawn" />
+    <MESSAGE value="added web functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added web functions" />
   </component>
 </project>
